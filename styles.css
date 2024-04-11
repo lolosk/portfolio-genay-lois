@@ -141,12 +141,44 @@ header {
     padding: 30px 0px;
     background-color: rgba(141, 141, 194, 0.212);
 }
-.about img {
+.about .img25 {
     height: auto;
     width: 15%;
     border: 10px solid #085284;
     box-shadow: 0 0 30px rgba(8, 82, 132, 0.5);
     border-radius: 40px;
+}
+.langtxt {
+  display: flex;
+  justify-content: center;
+  
+  font-size: 1.5vw;
+  font-weight: 100;
+  text-transform: capitalize;
+  padding-bottom: 1em;
+  
+  font-family: "Akaya Kanadaka", system-ui;
+  padding-top: 10px;
+  text-align: center;
+}
+#lang {
+  padding-right: 2vw;
+  padding-left: 2vw;
+}
+
+.draplist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 1em;
+}
+
+.drapeau {
+  width: 6.5vw;
+  height: auto;
+  margin-left: 2em;
+  margin-right: 2em;
+  border: #000 1px solid;
 }
 
 
@@ -489,6 +521,7 @@ header {
 .diplome {	
     margin: 0;
     padding: 0;
+    padding-bottom: 60px;
     background-color: rgba(141, 141, 194, 0.212);
     
     color: rgb(50,50,50);
@@ -988,4 +1021,71 @@ header {
     margin-right:0;
     font-weight:600
   }
+}
+
+
+/* ---------------------------- Path: Annexe ------------------------------------ */
+
+.button {
+  --main-focus: #2d8cf0;
+  --font-color: #323232;
+  --bg-color-sub: #dedede;
+  --bg-color: #eee;
+  --main-color: #323232;
+  position: relative;
+  margin-top: 10px;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.button, .button__icon, .button__text {
+  transition: all 0.3s;
+}
+
+.button .button__text {
+  transform: translateX(22px);
+  color: var(--font-color);
+  font-weight: 600;
+}
+
+.button .button__icon {
+  position: absolute;
+  transform: translateX(109px);
+  height: 100%;
+  width: 39px;
+  background-color: var(--bg-color-sub);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button .svg {
+  width: 20px;
+  fill: var(--main-color);
+}
+
+.button:hover {
+  background: var(--bg-color);
+}
+
+.button:hover .button__text {
+  color: transparent;
+}
+
+.button:hover .button__icon {
+  width: 148px;
+  transform: translateX(0);
+}
+
+.button:active {
+  transform: translate(3px, 3px);
+  box-shadow: 0px 0px var(--main-color);
 }
