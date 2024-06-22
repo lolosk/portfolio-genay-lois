@@ -29,3 +29,8 @@ Pour cloner et exécuter ce projet localement, suivez ces étapes :
    ```bash
    git clone https://github.com/lolosk/portfolio-genay-lois.git
    cd votre-repo-portfolio
+
+2. **Ouvrez le fichier index.html**
+
+   Ouvrez index.html dans votre navigateur préféré pour voir le portfolio en action.
+   
