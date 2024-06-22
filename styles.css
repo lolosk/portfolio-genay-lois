@@ -14,57 +14,12 @@ header {
     background-size: cover;
 }
 
-.navbar{
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    box-sizing: border-box;
-    background-color: whitesmoke;
-    z-index: 1000;
-    
-
-}
-
 .navbar a{
     color: black;
     font-size: 1.2em;
     font-weight: 500;
 
 }
-.navbar .logo{
-    font-size: 2em;
-    font-weight: bold;
-    margin-left: 2%;
-}
-
-
-.navbar .nav-links ul{
-    display: flex;
-
-}
-
-.navbar .nav-links ul li{
-    margin: 0 25px;
-
-}
-.navbar .nav-links ul li.active a{
-    color: #085284;
-    font-weight: 600;
-
-}
-.navbar .bouttonnav{
-    display: none;
-    position: relative;
-    width: 30px;
-    height: 25px;
-    top: 0px;
-    right: 2%;
-    
-    
-}
-
 
 @media screen and (max-width: 900px) {
     .nav-links {
