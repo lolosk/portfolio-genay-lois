@@ -27,5 +27,5 @@ Pour cloner et exécuter ce projet localement, suivez ces étapes :
 1. **Clonez le dépôt**
 
    ```bash
-   git clone https://github.com/votre-nom-utilisateur/votre-repo-portfolio.git
+   git clone https://github.com/lolosk/portfolio-genay-lois.git
    cd votre-repo-portfolio
