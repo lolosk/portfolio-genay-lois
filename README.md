@@ -1,4 +1,4 @@
-# Portfolio - Lois Genay
+# Portfolio - Loïs Genay
 
 Bienvenue sur mon portfolio personnel. Ce projet présente mes compétences, expériences, et projets réalisés au cours de ma formation et de mes activités personnelles.
 
