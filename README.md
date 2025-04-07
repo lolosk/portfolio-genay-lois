@@ -2,6 +2,8 @@
 
 Bienvenue sur mon portfolio personnel. Ce projet présente mes compétences, expériences, et projets réalisés au cours de ma formation et de mes activités personnelles.
 
+![demo](https://github.com/lolosk/portfolio-genay-lois/blob/main/Portfolio.gif)
+
 ## Introduction
 
 Ce portfolio est développé en utilisant HTML, CSS, et Bootstrap pour une conception responsive. Il est conçu pour fournir une vue claire de mon parcours et de mes compétences à d'éventuels employeurs et collaborateurs.
