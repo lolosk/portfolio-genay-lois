@@ -686,7 +686,7 @@ export default function PortfolioRefonte() {
           </div>
         </section>
 
-        <section className="mx-auto max-w-7xl overflow-hidden px-4 py-3 sm:px-6 lg:px-8">
+        <section className="mx-auto grid max-w-7xl items-center gap-12 px-4 pb-16 pt-14 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:pb-24 lg:pt-20">
           <div className="overflow-hidden rounded-full border border-black/5 bg-white/55 py-3 shadow-sm backdrop-blur-xl">
             <motion.div
               animate={{ x: ['0%', '-50%'] }}
