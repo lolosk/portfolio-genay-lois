@@ -465,7 +465,7 @@ export default function PortfolioRefonte() {
               animate="visible"
               custom={0.15}
               variants={fadeUp}
-              className="mt-6 max-w-4xl text-[2.55rem] font-semibold leading-[0.96] tracking-tight sm:text-5xl lg:text-7xl"
+              className="mt-6 max-w-4xl break-words text-[2.35rem] font-semibold leading-[0.96] tracking-tight sm:text-5xl lg:text-7xl"
             >
               Étudiant en <span className="bg-gradient-to-r from-zinc-900 via-amber-700 to-rose-500 bg-clip-text text-transparent">réseaux & télécommunications</span>,
               <br className="hidden lg:block" />
@@ -477,7 +477,7 @@ export default function PortfolioRefonte() {
               animate="visible"
               custom={0.26}
               variants={fadeUp}
-              className="mt-6 max-w-2xl text-base leading-8 text-zinc-700 sm:text-lg"
+              className="mt-6 max-w-2xl break-words text-base leading-8 text-zinc-700 sm:text-lg"
             >
               Je travaille surtout sur des sujets concrets : réseau, systèmes, déploiement de postes, support, virtualisation et documentation. L’idée de ce portfolio est simple : montrer clairement ce que je fais et comment je progresse.
             </motion.p>
