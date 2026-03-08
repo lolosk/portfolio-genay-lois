@@ -90,16 +90,7 @@ const ohsLogo = `${import.meta.env.BASE_URL}img/logo-ohs.png`;
 const grandEstLogo = `${import.meta.env.BASE_URL}img/logo-grand-est.png`;
 const linkedinUrl = 'https://www.linkedin.com/in/lo%C3%AFs-genay/';
 
-const marqueeLabels = [
-  'Cisco',
-  'Windows Server',
-  'Linux',
-  'Citrix VDI',
-  'VLAN',
-  'ToIP',
-  'Documentation',
-  'Power Platform',
-];
+
 const githubUrl = 'https://github.com/lolosk';
 const cvUrl = 'https://drive.google.com/file/d/1RsBtnarkMe0BDHUB1MJg8dGNZNSh10ZU/view';
 const portfolioUrl = 'https://lolosk.github.io/portfolio-genay-lois/index.html';
