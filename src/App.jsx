@@ -685,23 +685,7 @@ export default function PortfolioRefonte() {
           </div>
         </section>
 
-        <section className="mx-auto grid max-w-7xl items-center gap-12 px-4 pb-16 pt-14 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:pb-24 lg:pt-20">
-          <div className="overflow-hidden rounded-full border border-black/5 bg-white/55 py-3 shadow-sm backdrop-blur-xl">
-            <motion.div
-              animate={{ x: ['0%', '-50%'] }}
-              transition={{ duration: 22, repeat: Infinity, ease: 'linear' }}
-              className="flex min-w-max gap-10 whitespace-nowrap px-6 text-xs uppercase tracking-[0.34em] text-zinc-500 sm:text-sm"
-            >
-              {Array.from({ length: 2 }).map((_, idx) => (
-                <React.Fragment key={idx}>
-                  {marqueeLabels.map((label) => (
-                    <span key={`${idx}-${label}`}>{label}</span>
-                  ))}
-                </React.Fragment>
-              ))}
-            </motion.div>
-          </div>
-        </section>
+        
 
         <section id="projects" className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} custom={0.05} variants={fadeUp}>
