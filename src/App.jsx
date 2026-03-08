@@ -301,7 +301,7 @@ export default function PortfolioRefonte() {
 };
 
   return (
-    <div className="min-h-screen bg-[linear-gradient(180deg,#f8f4ee_0%,#f4efe7_35%,#eee8df_100%)] text-zinc-900">
+    <div className="min-h-screen overflow-x-hidden bg-[linear-gradient(180deg,#f8f4ee_0%,#f4efe7_35%,#eee8df_100%)] text-zinc-900">
       <AnimatePresence>
         {isLoading && (
           <motion.div
@@ -455,9 +455,9 @@ export default function PortfolioRefonte() {
       <main id="top">
         <section className="mx-auto grid max-w-7xl items-center gap-12 px-4 pb-16 pt-14 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:pb-24 lg:pt-20">
           <div>
-            <motion.div initial="hidden" animate="visible" custom={0.05} variants={fadeUp} className="inline-flex items-center rounded-full border border-black/5 bg-white/70 px-4 py-2 text-sm text-zinc-700 shadow-sm backdrop-blur-xl">
+            <motion.div initial="hidden" animate="visible" custom={0.05} variants={fadeUp} className="inline-flex max-w-full items-center rounded-full border border-black/5 bg-white/70 px-3 py-2 text-xs text-zinc-700 shadow-sm backdrop-blur-xl sm:px-4 sm:text-sm">
               <Sparkles className="mr-2 h-4 w-4 text-amber-600" />
-              Bonjour, je suis Loïs GENAY, bienvenue sur mon portfolio.
+              <span className="truncate">Bonjour, je suis Loïs GENAY, bienvenue sur mon portfolio.</span>
             </motion.div>
 
             <motion.h1
@@ -465,11 +465,15 @@ export default function PortfolioRefonte() {
               animate="visible"
               custom={0.15}
               variants={fadeUp}
-              className="mt-6 max-w-4xl break-words text-[2.35rem] font-semibold leading-[0.96] tracking-tight sm:text-5xl lg:text-7xl"
+              className="mt-6 max-w-4xl text-[2.15rem] font-semibold leading-[0.96] tracking-tight text-zinc-900 sm:text-5xl lg:text-7xl"
             >
-              Étudiant en <span className="bg-gradient-to-r from-zinc-900 via-amber-700 to-rose-500 bg-clip-text text-transparent">réseaux & télécommunications</span>,
-              <br className="hidden lg:block" />
-              je développe mes compétences en systèmes, réseaux et infrastructure.
+              Étudiant en{' '}
+              <span className="bg-gradient-to-r from-zinc-900 via-amber-700 to-rose-500 bg-clip-text text-transparent">
+                réseaux & télécommunications
+              </span>
+              ,<br className="hidden lg:block" />
+              <span className="block">je développe mes compétences en</span>
+              <span className="block">systèmes, réseaux et infrastructure.</span>
             </motion.h1>
 
             <motion.p
@@ -482,13 +486,13 @@ export default function PortfolioRefonte() {
               Je travaille surtout sur des sujets concrets : réseau, systèmes, déploiement de postes, support, virtualisation et documentation. L’idée de ce portfolio est simple : montrer clairement ce que je fais et comment je progresse.
             </motion.p>
 
-            <motion.div initial="hidden" animate="visible" custom={0.34} variants={fadeUp} className="mt-8 flex flex-wrap gap-4">
-              <Button asChild className="rounded-2xl bg-zinc-900 px-6 py-6 text-base text-white hover:bg-zinc-800">
+            <motion.div initial="hidden" animate="visible" custom={0.34} variants={fadeUp} className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+              <Button asChild className="w-full rounded-2xl bg-zinc-900 px-6 py-6 text-base text-white hover:bg-zinc-800 sm:w-auto">
                 <a href="#projects">
                   Voir mes réalisations <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
-              <Button asChild variant="outline" className="rounded-2xl border-black/10 bg-white/70 px-6 py-6 text-base text-zinc-900 hover:bg-white">
+              <Button asChild variant="outline" className="w-full rounded-2xl border-black/10 bg-white/70 px-6 py-6 text-base text-zinc-900 hover:bg-white sm:w-auto">
                 <a href={cvUrl} target="_blank" rel="noreferrer">
                   <FileText className="mr-2 h-4 w-4" /> CV
                 </a>
