@@ -454,10 +454,10 @@ export default function PortfolioRefonte() {
 
       <main id="top">
         <section className="mx-auto grid max-w-7xl items-center gap-12 px-4 pb-16 pt-14 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:pb-24 lg:pt-20">
-          <div>
+          <div className="min-w-0">
             <motion.div initial="hidden" animate="visible" custom={0.05} variants={fadeUp} className="inline-flex max-w-full items-center rounded-full border border-black/5 bg-white/70 px-3 py-2 text-xs text-zinc-700 shadow-sm backdrop-blur-xl sm:px-4 sm:text-sm">
               <Sparkles className="mr-2 h-4 w-4 text-amber-600" />
-              <span className="truncate">Bonjour, je suis Loïs GENAY, bienvenue sur mon portfolio.</span>
+              <span className="truncate">Bonjour, bienvenue sur mon portfolio.</span>
             </motion.div>
 
             <motion.h1
