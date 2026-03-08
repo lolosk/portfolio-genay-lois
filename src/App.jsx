@@ -20,6 +20,8 @@ import {
   X,
 } from 'lucide-react';
 
+const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+
 
 
 function joinClasses(...classes) {
@@ -281,23 +283,25 @@ export default function PortfolioRefonte() {
   const currentYear = useMemo(() => new Date().getFullYear(), []);
 
   useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 3000);
-    return () => clearTimeout(timer);
-  }, []);
+  const timer = setTimeout(() => setIsLoading(false), isMobile ? 800 : 3000);
+  return () => clearTimeout(timer);
+  }, [isMobile]);
 
   const handleSectionClick = (id) => (event) => {
   event.preventDefault();
   setMenuOpen(false);
-  setIsSweeping(true);
+  if (!isMobile) setIsSweeping(true);
 
   const target = document.getElementById(id);
   window.setTimeout(() => {
     target?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }, 160);
 
+  if (!isMobile) {
   window.setTimeout(() => {
     setIsSweeping(false);
   }, 900);
+}
 };
 
   return (
