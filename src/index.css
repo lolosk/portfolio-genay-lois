@@ -1,9 +1,23 @@
 @import "tailwindcss";
 
-html {
-  scroll-behavior: smooth;
+* {
+  box-sizing: border-box;
 }
 
-body {
+html,
+body,
+#root {
   margin: 0;
+  width: 100%;
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+  height: auto;
 }

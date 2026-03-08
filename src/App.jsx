@@ -465,7 +465,7 @@ export default function PortfolioRefonte() {
               animate="visible"
               custom={0.15}
               variants={fadeUp}
-              className="mt-6 max-w-4xl text-4xl font-semibold leading-[1.02] tracking-tight sm:text-5xl lg:text-7xl"
+              className="mt-6 max-w-4xl text-[2.55rem] font-semibold leading-[0.96] tracking-tight sm:text-5xl lg:text-7xl"
             >
               Étudiant en <span className="bg-gradient-to-r from-zinc-900 via-amber-700 to-rose-500 bg-clip-text text-transparent">réseaux & télécommunications</span>,
               <br className="hidden lg:block" />
