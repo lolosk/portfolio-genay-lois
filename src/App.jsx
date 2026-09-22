@@ -4,16 +4,19 @@ import {
   ArrowRight,
   BadgeCheck,
   Briefcase,
+  Building2,
+  Cloud,
   FileText,
   Github,
   GraduationCap,
-  Layers3,
+  KeyRound,
   Linkedin,
   Menu,
-  MonitorSmartphone,
   Phone,
   Network,
+  Router,
   Server,
+  Shield,
   ShieldCheck,
   Sparkles,
   Workflow,
@@ -123,45 +126,58 @@ const sections = [
 
 const expertise = [
   {
-    title: 'Réseaux',
+    title: 'Réseau & sécurité',
     icon: Network,
     accent: 'from-amber-200 via-orange-100 to-white',
-    items: ['Switching L2', 'VLAN / trunks', 'ToIP / VoIP', 'Cisco'],
-    text: 'Réseaux et infrastructures vus en cours et en stage, avec une vraie appétence pour les environnements concrets.',
+    items: ['Fortinet', 'Stormshield', 'Aruba', 'VLAN / trunks', 'VPN IPsec / SSL'],
+    text: 'Migrations de cœur de réseau et déploiement standardisé de sites distants, en production et sur plusieurs sites.',
   },
   {
-    title: 'Systèmes',
-    icon: Server,
+    title: 'Téléphonie',
+    icon: Phone,
     accent: 'from-rose-100 via-white to-amber-50',
-    items: ['Windows Server', 'Linux', 'Citrix VDI', 'Virtualisation'],
-    text: 'Systèmes, déploiement et environnements utilisateurs, avec une approche assez terrain.',
+    items: ['ToIP / VoIP', 'Migration opérateur', 'Multisite', 'Support'],
+    text: 'Pilotage de la migration téléphonique de l’ensemble des sites vers une nouvelle solution de ToIP.',
   },
   {
-    title: 'Outils & automatisation',
-    icon: Workflow,
+    title: 'Systèmes & services',
+    icon: Server,
     accent: 'from-orange-100 via-white to-stone-100',
-    items: ['Power Apps', 'Power Automate', 'SharePoint', 'Visio'],
-    text: 'Des outils utilisés sur des projets concrets pour simplifier et structurer certains besoins.',
+    items: ['Google Workspace', 'SSO Keycloak', 'Linux', 'Virtualisation', 'Windows Server / AD'],
+    text: 'Administration des services utilisés au quotidien par les équipes : comptes, identités, serveurs et postes.',
   },
   {
-    title: 'Documentation',
+    title: 'Documentation & support',
     icon: FileText,
     accent: 'from-stone-100 via-white to-amber-50',
-    items: ['Procédures', 'Schémas', 'Support utilisateurs', 'Méthodologie'],
-    text: 'La documentation fait aussi partie du travail : procédures, schémas, explications et passation.',
+    items: ['Procédures', 'Schémas réseau', 'Support utilisateurs', 'Interventions sur site'],
+    text: 'La documentation fait partie du travail : procédures, schémas et passation pour que l’infra reste exploitable.',
   },
 ];
 
 const experiences = [
   {
-    period: 'Mars 2026 — Aujourd’hui',
+    period: 'Juin 2026 — Aujourd’hui',
+    place: 'OHS de Lorraine · CDI',
+    title: 'Administrateur Réseaux & Téléphonie',
+    logo: ohsLogo,
+    current: true,
+    bullets: [
+      'Administration de l’infrastructure réseau et téléphonie de l’AMAPA.',
+      'Migration réseau et déploiement sur les sites distants (Fortinet, Stormshield, Aruba).',
+      'Pilotage de la migration téléphonique de l’ensemble des sites AMAPA (ToIP).',
+      'Administration Google Workspace, support et interventions multisites.',
+    ],
+  },
+  {
+    period: 'Mars 2026 — Juin 2026',
     place: 'OHS de Lorraine · Stage',
     title: 'Stagiaire Informatique — Réseaux & Systèmes',
     logo: ohsLogo,
     bullets: [
       'Participation à des opérations de migration réseau : switching L2, VLAN, trunks et ToIP.',
       'Déploiement et configuration de postes, avec accompagnement utilisateurs en environnement Citrix VDI.',
-      'Mise en place d’un SSO Hornetsecurity et rédaction de documentation technique / procédures.',
+      'Mise en place d’un SSO Keycloak (OIDC et SAML) pour différents fournisseurs de services et rédaction de documentation technique / procédures.',
     ],
   },
   {
@@ -179,25 +195,39 @@ const experiences = [
 
 const projects = [
   {
-    title: 'Migration réseau & segmentation',
+    title: 'Migration réseau multisite',
+    category: 'OHS · AMAPA',
+    icon: Router,
+    text: 'Migration cœur de réseau et déploiement standardisé de pare-feu et switchs sur les sites distants, avec interconnexion en VPN et segmentation par VLAN.',
+    tags: ['Fortinet', 'Stormshield', 'Aruba', 'VPN', 'VLAN'],
+  },
+  {
+    title: 'Migration téléphonique',
     category: 'OHS de Lorraine',
-    icon: Network,
-    text: 'Interventions sur des sujets de switching L2, VLAN, trunks et ToIP, dans un contexte professionnel réel où fiabilité et continuité de service comptent.',
-    tags: ['Switching L2', 'VLAN', 'Trunks', 'ToIP'],
+    icon: Phone,
+    text: 'Pilotage du passage de l’ensemble des sites AMAPA vers une nouvelle solution de ToIP : coordination des bascules et accompagnement des équipes sur chaque site.',
+    tags: ['ToIP', 'VoIP', 'Multisite', 'Pilotage'],
   },
   {
-    title: 'Environnement Citrix VDI',
-    category: 'Support & systèmes',
-    icon: MonitorSmartphone,
-    text: 'Déploiement, configuration de postes et accompagnement utilisateurs dans un environnement virtualisé, avec une attention portée à l’usage concret.',
-    tags: ['Citrix VDI', 'Postes', 'Support', 'Windows'],
+    title: 'Système d’information de l’AMAPA',
+    category: 'OHS · AMAPA',
+    icon: Building2,
+    text: 'Gestion et structuration du SI d’une seconde structure : comptes, postes, accès distants et flotte mobile.',
+    tags: ['Google Workspace', 'Postes', 'VPN', 'Mobiles'],
   },
   {
-    title: 'SSO Hornetsecurity',
-    category: 'Sécurité & documentation',
+    title: 'Identités & services cloud',
+    category: 'Systèmes',
+    icon: Cloud,
+    text: 'Administration Google Workspace et travail sur la gestion des identités / SSO pour simplifier l’accès des utilisateurs.',
+    tags: ['Google Workspace', 'Identités', 'SSO'],
+  },
+  {
+    title: 'SSO Keycloak',
+    category: 'Stage OHS · Sécurité',
     icon: ShieldCheck,
-    text: 'Mise en place d’un SSO associée à la rédaction de procédures, pour sécuriser et simplifier l’expérience côté utilisateurs et exploitation.',
-    tags: ['SSO', 'Hornetsecurity', 'Procédures', 'Sécurité'],
+    text: 'Mise en place d’un SSO Keycloak en OIDC et SAML pour différents fournisseurs de services, associée à la rédaction de procédures, pour sécuriser et simplifier l’accès des utilisateurs.',
+    tags: ['Keycloak', 'OIDC', 'SAML', 'SSO'],
   },
   {
     title: 'Application de gestion du télétravail',
@@ -206,27 +236,47 @@ const projects = [
     text: 'Conception d’un outil interne basé sur la Power Platform, pensé pour digitaliser un besoin métier et le rendre plus fluide au quotidien.',
     tags: ['Power Apps', 'Power Automate', 'SharePoint', 'Forms'],
   },
-  {
-    title: 'Schémas réseau & documentation',
-    category: 'Structuration des outils',
-    icon: Layers3,
-    text: 'Travail de remise à plat et de standardisation documentaire, afin de produire des schémas plus clairs, homogènes et plus simples à exploiter.',
-    tags: ['Visio', 'Documentation', 'Réseaux', 'Méthode'],
-  },
 ];
 
+// Pas encore de logo pour Fortinet / Stormshield / Aruba / Google Workspace / Keycloak :
+// une icône s'affiche à la place. Pour mettre le vrai logo, déposer le fichier
+// dans public/img/ et remplacer `icon: ...` par `src: \`${import.meta.env.BASE_URL}img/logo-xxx.png\``.
 const techStack = [
+  {
+    label: 'Fortinet',
+    icon: Shield,
+  },
+  {
+    label: 'Stormshield',
+    icon: ShieldCheck,
+  },
+  {
+    label: 'Aruba',
+    icon: Router,
+  },
+  {
+    label: 'ToIP',
+    icon: Phone,
+  },
+  {
+    label: 'Google Workspace',
+    icon: Cloud,
+  },
+  {
+    label: 'Keycloak',
+    icon: KeyRound,
+  },
   {
     label: 'Cisco',
     src: `${import.meta.env.BASE_URL}img/logo-cisco.png`,
   },
   {
-    label: 'Windows Server',
-    src: `${import.meta.env.BASE_URL}img/logo-windows.svg`,
-  },
-  {
     label: 'Linux',
     src: `${import.meta.env.BASE_URL}img/logo-linux.svg`,
+  },
+  {
+    label: 'Windows Server / AD',
+    src: `${import.meta.env.BASE_URL}img/logo-windows.svg`,
   },
   {
     label: 'Citrix',
@@ -237,28 +287,12 @@ const techStack = [
     src: `${import.meta.env.BASE_URL}img/logo-vlan.png`,
   },
   {
-    label: 'ToIP',
-    icon: Phone,
-  },
-  {
-    label: 'Power Apps',
-    src: `${import.meta.env.BASE_URL}img/logo-powerapps.png`,
-  },
-  {
     label: 'Power Automate',
     src: `${import.meta.env.BASE_URL}img/logo-powerautomate.png`,
   },
   {
-    label: 'SharePoint',
-    src: `${import.meta.env.BASE_URL}img/logo-sharepoint.png`,
-  },
-  {
     label: 'Visio',
     src: `${import.meta.env.BASE_URL}img/logo-visio.png`,
-  },
-  {
-    label: 'Java',
-    src: `${import.meta.env.BASE_URL}img/logo-java.png`,
   },
   {
     label: 'SQL',
@@ -466,13 +500,11 @@ export default function PortfolioRefonte() {
               variants={fadeUp}
               className="mt-6 max-w-4xl text-[2.15rem] font-semibold leading-[0.96] tracking-tight text-zinc-900 sm:text-5xl lg:text-7xl"
             >
-              Étudiant en{' '}
+              Administrateur{' '}
               <span className="bg-gradient-to-r from-zinc-900 via-amber-700 to-rose-500 bg-clip-text text-transparent">
-                réseaux & télécommunications
-              </span>
-              ,<br className="hidden lg:block" />
-              <span className="block">je développe mes compétences en</span>
-              <span className="block">systèmes, réseaux et infrastructure.</span>
+                réseaux & téléphonie
+              </span>{' '}
+              à l’OHS de Lorraine.
             </motion.h1>
 
             <motion.p
@@ -482,7 +514,7 @@ export default function PortfolioRefonte() {
               variants={fadeUp}
               className="mt-6 max-w-2xl break-words text-base leading-8 text-zinc-700 sm:text-lg"
             >
-              Je travaille surtout sur des sujets concrets : réseau, systèmes, déploiement de postes, support, virtualisation et documentation. L’idée de ce portfolio est simple : montrer clairement ce que je fais et comment je progresse.
+              En poste à l’OHS de Lorraine, j’interviens sur l’ensemble de l’infrastructure : réseau et sécurité, téléphonie d’entreprise, services cloud, support et documentation. Ce portfolio montre ce que je fais concrètement, et comment je progresse.
             </motion.p>
 
             <motion.div initial="hidden" animate="visible" custom={0.34} variants={fadeUp} className="mt-8 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
@@ -518,15 +550,15 @@ export default function PortfolioRefonte() {
                       <span className="rounded-full border border-black/5 bg-white/75 px-3 py-1 text-xs uppercase tracking-[0.22em] text-zinc-600">
                         Nancy · Grand Est
                       </span>
-                      <span className="rounded-full border border-amber-200 bg-amber-50 px-3 py-1 text-xs font-medium text-amber-800">
-                        En stage actuellement
+                      <span className="rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-800">
+                        En poste · CDI
                       </span>
                     </div>
 
                     <h2 className="mt-4 text-3xl font-semibold tracking-tight">Loïs Genay</h2>
                     <p className="mt-3 text-sm leading-7 text-zinc-700 sm:text-base">
-                      Étudiant en 3e année de BUT Réseaux & Télécommunications, actuellement en stage chez OHS de Lorraine sur des sujets réseaux, systèmes,
-                      Citrix VDI, ToIP, VLAN et documentation technique.
+                      Administrateur réseaux & téléphonie à l’OHS de Lorraine, diplômé d’un BUT Réseaux & Télécommunications. Réseau, sécurité, ToIP,
+                      Google Workspace et support multisite.
                     </p>
 
                     <div className="mt-6 grid gap-3 sm:grid-cols-2">
@@ -536,7 +568,7 @@ export default function PortfolioRefonte() {
                             <img src={iutLogo} alt="Logo IUT Nancy-Brabois" className="h-full w-full object-contain scale-[1.08]" />
                           </div>
                           <div>
-                            <div className="text-[11px] uppercase tracking-[0.24em] text-zinc-500">Formation</div>
+                            <div className="text-[11px] uppercase tracking-[0.24em] text-zinc-500">Diplômé · 2026</div>
                             <div className="mt-1 text-sm text-zinc-900">BUT Réseaux & Télécommunications · IUT Nancy-Brabois</div>
                           </div>
                         </div>
@@ -548,8 +580,8 @@ export default function PortfolioRefonte() {
                             <img src={ohsLogo} alt="Logo OHS de Lorraine" className="h-full w-full object-contain" />
                           </div>
                           <div>
-                            <div className="text-[11px] uppercase tracking-[0.24em] text-zinc-500">Stage actuel</div>
-                            <div className="mt-1 text-sm text-zinc-900">OHS de Lorraine</div>
+                            <div className="text-[11px] uppercase tracking-[0.24em] text-zinc-500">Poste actuel</div>
+                            <div className="mt-1 text-sm text-zinc-900">Administrateur Réseaux & Téléphonie · OHS de Lorraine</div>
                           </div>
                         </div>
                       </div>
@@ -575,16 +607,13 @@ export default function PortfolioRefonte() {
                 <CardContent className="p-6 sm:p-8">
                   <div className="space-y-4 text-base leading-8 text-zinc-700">
                     <p>
-                      Étudiant en 3e année de BUT Réseaux & Télécommunications, je suis particulièrement intéressé par les systèmes, les réseaux et l’infrastructure informatique.
+                      Diplômé d’un BUT Réseaux & Télécommunications à l’IUT Nancy-Brabois, j’ai été embauché en CDI à l’OHS de Lorraine à la suite de mon stage de fin d’études.
                     </p>
                     <p>
-                      J’ai pu développer des compétences autour de technologies comme Cisco, Proxmox, Windows Server et Linux, ainsi qu’en développement avec Java, JavaScript et SQL.
+                      J’y suis administrateur réseaux et téléphonie pour une association médico-sociale et je travaille également sur le système d’information de l’AMAPA (Groupe national) : migrations réseau, téléphonie d’entreprise et support sur l’ensemble des sites.
                     </p>
                     <p>
-                      Mon parcours m’a aussi permis de travailler sur des projets concrets en administration systèmes et réseaux, virtualisation, documentation technique et outils Microsoft / Power Platform.
-                    </p>
-                    <p>
-                      Sérieux, curieux et motivé, je cherche avant tout à continuer à progresser à travers des expériences concrètes et professionnalisantes.
+                      En parallèle, je continue à pratiquer sur un homelab personnel (Proxmox, Debian, Docker) pour tester et approfondir ce que je ne croise pas forcément au travail.
                     </p>
                   </div>
                 </CardContent>
@@ -596,7 +625,7 @@ export default function PortfolioRefonte() {
         <section id="expertise" className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} custom={0.05} variants={fadeUp}>
             <div className="text-xs uppercase tracking-[0.32em] text-zinc-500">Expertise</div>
-            <h3 className="mt-3 text-3xl font-semibold sm:text-4xl">Compétences et environnements que j’utilise déjà.</h3>
+            <h3 className="mt-3 text-3xl font-semibold sm:text-4xl">Ce sur quoi j’interviens au quotidien.</h3>
           </motion.div>
 
           <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
@@ -668,7 +697,7 @@ export default function PortfolioRefonte() {
                         </div>
                         <div>
                           <div className="mt-1 inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-100 to-rose-100 shadow-sm">
-                            {index === 0 ? <Briefcase className="h-5 w-5" /> : <GraduationCap className="h-5 w-5" />}
+                            {exp.current ? <Briefcase className="h-5 w-5" /> : <GraduationCap className="h-5 w-5" />}
                           </div>
                           <h4 className="mt-3 text-xl font-semibold">{exp.title}</h4>
                           <div className="mt-4 space-y-3">
@@ -745,7 +774,7 @@ export default function PortfolioRefonte() {
                 <div className="text-xs uppercase tracking-[0.32em] text-zinc-500">Stack</div>
                 <h3 className="mt-3 text-3xl font-semibold sm:text-4xl">Les outils et environnements que j’utilise.</h3>
                 <p className="mt-5 max-w-lg text-base leading-8 text-zinc-700">
-                  Voici les principaux outils, environnements et technos que j’ai déjà utilisés dans mon parcours.
+                  Les équipements, services et technos que j’utilise en poste, et ceux vus en formation et en stage.
                 </p>
               </div>
 
@@ -812,7 +841,7 @@ export default function PortfolioRefonte() {
       </main>
 
       <footer className="border-t border-black/5 px-4 py-6 text-center text-sm text-zinc-500 sm:px-6 lg:px-8">
-        © 2026 Loïs Genay · portfolio
+        © {currentYear} Loïs Genay · portfolio
       </footer>
     </div>
   );
